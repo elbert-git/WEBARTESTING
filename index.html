@@ -4,20 +4,19 @@
 	<meta charset="UTF-8">
 	<title></title>
 	<!--import js libraries-->
-	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
-	<p
-		style:"position:absolute; top:0;left:0;">this is a test</p>
 	<a-scene
 		vr-mode-ui="enabled: false;"
-		embedded arjs = "trackingMethod: best; soureType: webcam; debugUIEnabled: true;"
+		embedded
+		arjs = "trackingMethod: best; soureType: webcam; debugUIEnabled: true;"
 		renderer="logarithmicDepthBuffer: true;"
 		>
 		<a-nft 
 		type:"nft"
-		url="3d3e36cb53e6e180ba3eb1cfa4a11bdb"
+		url="tracker"
 		smooth="true"
 		smoothCount="10"
 		smoothTolerance="0.01"
