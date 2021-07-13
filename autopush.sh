@@ -1,5 +1,5 @@
 #!/bin/sh
 
 git add .
-git commit
+git commit -m "aaaahhhrrrhhh"
 git push
