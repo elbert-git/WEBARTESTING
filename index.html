@@ -7,26 +7,32 @@
 	<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 </head>
-<body style="margin: 0; overflow: hidden;">
+<body style="margin: 0; overflow: hidden; detectionMode: mono_and_matrix; matrixCodeType: 3x3">
 	<p>pekou</p>
+	<!--main A-scene-->
 	<a-scene
 		vr-mode-ui="enabled: false;"
 		embedded
 		arjs = "trackingMethod: best; soucreType: webcam; debugUIEnabled: true;"
 		renderer="logarithmicDepthBuffer: true;"
 		>
-		<a-nft 
-		type:"nft"
-		url="./tracker"
-		smooth="true"
-		smoothCount="10"
-		smoothTolerance=".01"
-		smoothThreshold="5"
-			>
-			<a-box position="0 0.5 0" rotation="0 0 0" scale="1 1 1" material="color: red">
-			</a-box>
-		</a-nft>
-		<a-entity camera></a-entity>
+		<!--import main asset-->
+		<a-assets>
+			<a-asset-item id="main-asset" src="./Assets/suzzane.gltf"></a-asset-item>
+		</a-assets>
+		 
+		<!--setup marker-->
+		<a-marker type='barcode' value='7'>
+			<!--link asset (as entity) to marker-->
+			<a-entity
+				gltf-model="#main-asset"
+				scale="2"
+				></a-entity>
+		</a-marker>
+		 
+		<!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
+		<!--<a-entity camera></a-entity>-->
+		<a-marker-camera></a-marker-camera>
 	</a-scene>
 </body>
 </html>
