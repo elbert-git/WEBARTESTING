@@ -9,13 +9,13 @@
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
 <body style="oveflow=hidden; margin=0;">
-	<p>1130</p>
+	<p>1143</p>
 	<a-scene embedded arjs>
 		<a-marker preset="hiro">
 			<a-entity
 				gltf-model="./Assets/suzzane.gltf"
-				src="./Assets/SuzzDiff.png"
-				rotation="90 0 0"
+				material="src: ./Assets/SuzzDiff.png"
+				rotation="-90 0 0"
 				></a-entity>
 		</a-marker>
 		<a-entity camera></a-entity>
