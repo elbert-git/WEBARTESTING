@@ -29,14 +29,18 @@
 		 
 		<a-nft 
 			type="nft"
-			url="./Assets/ImageMarkers/Koba"
+			url="./Assets/ImageMarkers/pinball"
 			size="0.1"
 			smooth="true"
+			smoothCount="10"
+			smoothTolerance=".01"
+			smoothThreshold="5"
 			>
 			<a-box scale="0.1 0.1 0.1"></a-box>
 			<a-gltf-model
 				gltf-model="#suzz"
-				scale="10 10 10"
+				position="150 0 0"
+				scale="20 20 20"
 				rotation="-90 0 0"
 				animation-mixer="clip:anim; loop:repeat;"
 				></a-gltf-model>
