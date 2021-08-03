@@ -12,14 +12,19 @@
 <body style="oveflow=hidden; margin=0;">
 	<p>asldkj;alsd</p>
 	 
-	<a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+	<a-scene embedded arjs='trackingMethod: best; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!--assets
 		<a-assets>
 			<a-asset-item id="suzz" response-type="arraybuffer" src="./Assets/Suzz/suzzane.gltf"></a-asset-item>
 		</a-assets>
 		-->
 		
-		<a-marker type='barcode' value='5'>
+		<a-marker type='barcode' value='5'
+			smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+			>
 			<a-box></a-box>
 		</a-marker>
 		 
