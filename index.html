@@ -12,19 +12,22 @@
 <body style="oveflow=hidden; margin=0;">
 	<p>asldkj;alsd</p>
 	 
-	<a-scene embedded arjs>
-		<!--assets-->
+	<a-scene embedded arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+		<!--assets
 		<a-assets>
 			<a-asset-item id="suzz" response-type="arraybuffer" src="./Assets/Suzz/suzzane.gltf"></a-asset-item>
 		</a-assets>
-		 
-		<a-marker preset="hiro">
-			<a-gltf-model
-				gltf-model="#suzz"
-				rotation="-90 0 0"
-				animation-mixer="clip:anim; loop:repeat;"
-				></a-gltf-model>
+		-->
+		
+		<a-marker type='barcode' value='5'>
+			<a-box></a-box>
 		</a-marker>
+		 
+		<a-marker type='barcode' value='6'>
+			<a-sphere></a-sphere>
+		</a-marker>
+		 
+		 
 		<a-entity camera></a-entity>
 	</a-scene>
 </body>
