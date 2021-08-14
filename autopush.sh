@@ -1,5 +1,4 @@
 #!/bin/sh
-
-git add .
-git commit 
-git push
+git add .;
+git commit;
+git push;
