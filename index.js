@@ -11,9 +11,9 @@ marker.addEventListener("markerFound", (e)=>{
 	 
 	//reset animations on marker found
 	//set animation clip = 0 to nullify animations;
-	model.setAttribute('animation-mixer', "clip:0; loop:once;")
+	model.setAttribute('animation-mixer', "clip:Page1ArmatureAction; loop:repeat;")
 	//then reset animations to correct animations
-	model.setAttribute('animation-mixer', "clip:Spin; loop:once;")
+	model.setAttribute('animation-mixer', "clip:Page1ArmatureAction; loop:repeat;")
 });
 
 
