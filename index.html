@@ -18,11 +18,65 @@
 		<a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		 
 		<a-assets>
-			<a-asset-item id="spin-asset" response-type="arraybuffer" src='./Assets/Test1Page.gltf'></a-asset-item>
+			<a-asset-item id="Page1" response-type="arraybuffer" src='./Assets/Page1.gltf'></a-asset-item>
+			<a-asset-item id="Page2" response-type="arraybuffer" src='./Assets/Page2.gltf'></a-asset-item>
+			<a-asset-item id="Page3" response-type="arraybuffer" src='./Assets/Page3.gltf'></a-asset-item>
+			<a-asset-item id="Page4" response-type="arraybuffer" src='./Assets/Page4.gltf'></a-asset-item>
+			<a-asset-item id="Page5" response-type="arraybuffer" src='./Assets/Page5.gltf'></a-asset-item>
+			<a-asset-item id="Page6" response-type="arraybuffer" src='./Assets/Page6.gltf'></a-asset-item>
+			<a-asset-item id="Page7" response-type="arraybuffer" src='./Assets/Page7.gltf'></a-asset-item>
 		</a-assets>
 		 
-		<a-marker type='barcode' value='0' id="markerseven">
-			<a-entity id='model' gltf-model="#spin-asset" animation-mixer="clip:Page1ArmaturePage; loop:repeat;"
+		<a-marker type='barcode' value='0'>
+			<a-entity  gltf-model="#Page1" animation-mixer="clip:Page1ArmatureAction; loop:repeat;"
+				position="1.1 0 -0.69"
+				rotation="0 90 0"
+				scale="3.6 3.6 3.6"
+				></a-entity>
+		</a-marker>
+		
+		<a-marker type='barcode' value='1'>
+			<a-entity  gltf-model="#Page2" animation-mixer="clip:Page2ArmatureAction; loop:repeat;"
+				position="1.1 0 -0.69"
+				rotation="0 90 0"
+				scale="3.6 3.6 3.6"
+				></a-entity>
+		</a-marker>
+		
+		<a-marker type='barcode' value='2'>
+			<a-entity  gltf-model="#Page3" animation-mixer="clip:Page3ArmatureAction; loop:repeat;"
+				position="1.1 0 -0.69"
+				rotation="0 90 0"
+				scale="3.6 3.6 3.6"
+				></a-entity>
+		</a-marker>
+		
+		<a-marker type='barcode' value='3'>
+			<a-entity  gltf-model="#Page4" animation-mixer="clip:Page4ArmatureAction; loop:repeat;"
+				position="1.1 0 -0.69"
+				rotation="0 90 0"
+				scale="3.6 3.6 3.6"
+				></a-entity>
+		</a-marker>
+		
+		<a-marker type='barcode' value='4'>
+			<a-entity  gltf-model="#Page5" animation-mixer="clip:Page5ArmatureAction; loop:repeat;"
+				position="1.1 0 -0.69"
+				rotation="0 90 0"
+				scale="3.6 3.6 3.6"
+				></a-entity>
+		</a-marker>
+		
+		<a-marker type='barcode' value='5'>
+			<a-entity  gltf-model="#Page6" animation-mixer="clip:Page6ArmatureAction; loop:repeat;"
+				position="1.1 0 -0.69"
+				rotation="0 90 0"
+				scale="3.6 3.6 3.6"
+				></a-entity>
+		</a-marker>
+		
+		<a-marker type='barcode' value='6'>
+			<a-entity  gltf-model="#Page7" animation-mixer="clip:Page7ArmatureAction; loop:repeat;"
 				position="1.1 0 -0.69"
 				rotation="0 90 0"
 				scale="3.6 3.6 3.6"
