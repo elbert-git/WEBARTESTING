@@ -10,11 +10,22 @@
 		
 		<!--importing the hologram shader by Travis Barry Dick-->
 		<script src="https://unpkg.com/aframe-hologram-shader"></script>
+		 
+		<!--stylesheet-->
+		<link rel="stylesheet" href="./style.css">
 	</head>
 	<body style='margin : 0px; overflow: hidden;'>
-		<div>dadssss</div>
+		 
+		<!-- this is just a standard loading page -->
+		<div class="parent-center">
+			<div class="loading-text">Loading...</div>
+		</div>
+		 
+		
+		<!-- below is all arjs and a-frame scene -->
 		<!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
 		<a-scene
+				vr-mode-ui="enabled: false"
 			embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3_PARITY65;'
 			renderer="antialias: true; logarithmicDepthBuffer: true; colorManagement: true; sortObjects: true;"
 			>
@@ -80,7 +91,7 @@
 				></a-entity>
 		</a-marker>
 		
-		<a-marker type='barcode' value='6'>
+		<a-marker id="marker7" type='barcode' value='6'>
 			<a-entity  gltf-model="#Page7" animation-mixer="clip:Page7ArmatureAction.002; loop:repeat;"
 				position="1.1 0 -0.69"
 				rotation="0 90 0"
@@ -91,6 +102,7 @@
 		<!--final hologram marker-->
 		<a-marker type='barcode' value='10'>
 			<a-entity
+					id = "hologramModel"
 					gltf-model="#finalHolo"
 					animation-mixer="clip:hololoop; loop:repeat;"
 					position="0 1 0"
