@@ -1,0 +1,22 @@
+body {
+	background-color: black;
+}
+ 
+.red-border {
+	border-color: red;
+	border-width: 3px;
+	border-style: solid;
+}
+.parent-center {
+	background-color: black;
+	height: 99vh;
+	width: 99vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+ 
+.loading-text {
+	color: white;
+	font-size: 3em;
+}
