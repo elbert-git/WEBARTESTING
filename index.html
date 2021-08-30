@@ -34,83 +34,26 @@
 		 
 		<a-assets>
 			<!--main page models-->
-			<a-asset-item id="Page1" response-type="arraybuffer" src='./Assets/Page1.gltf'></a-asset-item>
-			<a-asset-item id="Page2" response-type="arraybuffer" src='./Assets/Page2.gltf'></a-asset-item>
-			<a-asset-item id="Page3" response-type="arraybuffer" src='./Assets/Page3.gltf'></a-asset-item>
-			<a-asset-item id="Page4" response-type="arraybuffer" src='./Assets/Page4.gltf'></a-asset-item>
-			<a-asset-item id="Page5" response-type="arraybuffer" src='./Assets/Page5.gltf'></a-asset-item>
-			<a-asset-item id="Page6" response-type="arraybuffer" src='./Assets/Page6.gltf'></a-asset-item>
-			<a-asset-item id="Page7" response-type="arraybuffer" src='./Assets/Page7.gltf'></a-asset-item>
-			<a-asset-item id="finalHolo" response-type="arraybuffer" src='./Assets/finalgltfsetup.gltf'></a-asset-item>
-			 
+			<a-asset-item id="simpleText" response-type="arraybuffer" src='./Assets/CustomBuild/textsimple.gltf'></a-asset-item>
+			<a-asset-item id="Suzzane" response-type="arraybuffer" src='./Assets/CustomBuild/suzzanedemo.gltf'></a-asset-item>
 		</a-assets>
 		 
-		<a-marker type='barcode' value='0'>
-			<a-entity  gltf-model="#Page1" animation-mixer="clip:Page1ArmatureAction; loop:repeat;"
-				position="1.1 0 -0.69"
-				rotation="0 90 0"
-				scale="3.6 3.6 3.6"
-				></a-entity>
-		</a-marker>
 		
-		<a-marker type='barcode' value='1'>
-			<a-entity  gltf-model="#Page2" animation-mixer="clip:Page2ArmatureAction; loop:repeat;"
-				position="1.1 0 -0.69"
-				rotation="0 90 0"
-				scale="3.6 3.6 3.6"
-				></a-entity>
-		</a-marker>
-		
-		<a-marker type='barcode' value='2'>
-			<a-entity  gltf-model="#Page3" animation-mixer="clip:Page3ArmatureAction; loop:repeat;"
-				position="1.1 0 -0.69"
-				rotation="0 90 0"
-				scale="3.6 3.6 3.6"
-				></a-entity>
-		</a-marker>
-		
-		<a-marker type='barcode' value='3'>
-			<a-entity  gltf-model="#Page4" animation-mixer="clip:Page4ArmatureAction; loop:repeat;"
-				position="1.1 0 -0.69"
-				rotation="0 90 0"
-				scale="3.6 3.6 3.6"
-				></a-entity>
-		</a-marker>
-		
-		<a-marker type='barcode' value='4'>
-			<a-entity  gltf-model="#Page5" animation-mixer="clip:Page5-6PaperAction; loop:repeat;"
-				position="1.1 0 -0.69"
-				rotation="0 90 0"
-				scale="3.6 3.6 3.6"
-				></a-entity>
-		</a-marker>
-		
-		<a-marker type='barcode' value='5'>
-			<a-entity  gltf-model="#Page6" animation-mixer="clip:Page5-6PaperAction; loop:repeat;"
-				position="1.1 0 -0.69"
-				rotation="0 90 0"
-				scale="3.6 3.6 3.6"
-				></a-entity>
-		</a-marker>
-		
-		<a-marker id="marker7" type='barcode' value='6'>
-			<a-entity  gltf-model="#Page7" animation-mixer="clip:Page7ArmatureAction.002; loop:repeat;"
-				position="1.1 0 -0.69"
-				rotation="0 90 0"
-				scale="3.6 3.6 3.6"
-				></a-entity>
-		</a-marker>
-		
-		<!--final hologram marker-->
-		<a-marker type='barcode' value='10'>
+		<!--custom markers-->
+		<a-marker type='pattern' preset='custom' url='./Assets/CustomBuild/smileypat.patt'>
 			<a-entity
 					id = "hologramModel"
-					gltf-model="#finalHolo"
-					material="shader:hologram;"
-					animation-mixer="clip:hololoop; loop:repeat;"
-					position="0 1 0"
+					gltf-model="#simpleText"
+					color="black"
 					scale="3 3 3"
 				></a-entity>
+		</a-marker>
+		 
+		<a-marker type='barcode' value='4'>
+			<a-entity
+					gltf-model="#Suzzane"
+				>
+			</a-entity>
 		</a-marker>
 		 
 		<!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
